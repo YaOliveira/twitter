@@ -15,24 +15,19 @@
     <header>
         <img id = "img-topo-bkg" src="assets/images/favicon_twitter.png" alt="Logo do Twitter">
     </header>
-    <form action="url de onde os dados deverão ir" method="post">
-        <div>
-            <label for="name">Nome:</label>
-            <input type="text" id="name" />
-        </div>
-        <div>
-            <label for="mail">E-mail:</label>
-            <input type="email" id="mail" />
-        </div>
+    <hr>
+    <form method="post">
+        
         <div>
             <label for="msg">Mensagem:</label>
-            <textarea id="msg"></textarea>
+            <textarea id="msg" placeholder="O que está acontecendo?"></textarea>
         </div>
-        <div class="button">
-            <button type="submit">Tweetar</button>
+        <div>
+            <button onclick="printMessage()"class="btnTweetar" type="submit">Tweetar</button>
         </div>
 
     </form>
+    <p id="messageHere"></p>
     <script src="js/app.js"></script>
 </body>
 

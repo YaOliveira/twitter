@@ -1,10 +1,29 @@
+*{
+    margin: 0em;
+}
+header{
+    
+    background-color: #FFFFFF;
+    display: flex;
+}
+/* ----------------------*/
+#img-topo-bkg{
+    width: 2em;;
+    margin: 0 auto;
+    padding: 1em;
+    
+}
+body{
+    background-color:#E8F5FD;
+}
 form {
     /* Apenas para centralizar o form na página */
     margin: 0 auto;
+    margin-top: 3em;
     width: 400px;
     /* Para ver as bordas do formulário */
     padding: 1em;
-    border: 1px solid #CCC;
+    border: 1px solid #4AB3F4;
     border-radius: 1em;
 }
 
@@ -34,7 +53,7 @@ input, textarea {
     box-sizing: border-box;
 
     /* Para harmonizar o look & feel das bordas nos campos de texto*/
-    border: 1px solid #999;
+    border: 1px solid #4AB3F4;
 }
 
 /* Formulários HTML suportam muitas pseudo-classes para
@@ -60,24 +79,13 @@ textarea {
 
 /* os botões precisam de estilos especiais também. Para esse fim, nós o colocamos dentro de uma <div> com uma classe css button. Aqui, queremos que o botão esteja alinhado com os outros campos . Para conseguir isso, temos de imitar a presença de uma <label>. Isso é feito utilizando padding e margin. */
 
-.button {
-    /* Para posicionar os botões para a mesma posição dos campos de texto */
-    padding-left: 90px; /* mesmo tamanho que os elementos do tipo label */
-   
-}
+
 button {
     /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
-    margin-left: .5em;
+    margin-left: 24em;
     background: #4AB3F4;
     font-weight: bold;
     color: #ffffff;
 }
 
 
-/* ----------------------*/
-    #img-topo-bkg{
-        width: 100px;
-        margin: 0 auto;
-        padding: 1em;
-        
-    }
