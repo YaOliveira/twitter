@@ -91,3 +91,9 @@ textarea {
     font-family: Arial;
     font-size: 5em;
 }
+
+#contadorHere{
+    font-size: 4em;
+    
+    margin-left: 2em;
+}
