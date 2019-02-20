@@ -43,6 +43,15 @@ function caracteres() {
     }
 }
 
+function autoResize() {
+    objTextArea = document.getElementById('msg');
+    while (objTextArea.scrollHeight > objTextArea.offsetHeight) {
+        objTextArea.rows += 1;
+    }
+    while (objTextArea.scrollHeight < objTextArea.offsetHeight) {
+        objTextArea.rows -= 1;
+    }
+}
 
 
 

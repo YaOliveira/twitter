@@ -1,21 +1,25 @@
-*{
+* {
     margin: 0em;
 }
-header{
-    
+
+header {
     background-color: #FFFFFF;
     display: flex;
 }
+
 /* ----------------------*/
-#img-topo-bkg{
-    width: 2em;;
+
+#img-topo-bkg {
+    width: 2em;
+    ;
     margin: 0 auto;
     padding: 1em;
-    
 }
-body{
-    background-color:#E8F5FD;
+
+body {
+    background-color: #E8F5FD;
 }
+
 form {
     /* Apenas para centralizar o form na página */
     margin: 0 auto;
@@ -29,7 +33,7 @@ form {
 
 /* adicionaremos algum espaço entre cada conjunto de campos do form */
 
-form div + div {
+form div+div {
     margin-top: 1em;
 }
 
@@ -46,12 +50,10 @@ label {
 textarea {
     /* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
     font: 1em sans-serif;
-
     /* Para dar o mesmo tamanho a todos os campo de texto */
     width: 300px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-
     /* Para harmonizar o look & feel das bordas nos campos de texto*/
     border: 1px solid #4AB3F4;
 }
@@ -59,26 +61,23 @@ textarea {
 /* Formulários HTML suportam muitas pseudo-classes para
  descrever os estados de cada elemento. Como exemplo, vamos adicionar um pouco de destaque quando um campo está ativo. É uma maneira conveniente para ajudar a manter o controle do usuário de onde eles está no formulário. */
 
-
- input:focus, textarea:focus {
+input:focus, textarea:focus {
     /* Dar um pouco de destaque nos elementos ativos */
-    border-color: #000;
+    border-color: #23238E;
 }
 
 /* o uso da propriedade de resize, que é uma forma de permitir que os usuários redimensionar um elemento <textarea>. */
+
 textarea {
     /* Para alinhar corretamente os campos de texto de várias linhas com sua label*/
     vertical-align: top;
-
     /* Para dar espaço suficiente para digitar algum texto */
     height: 5em;
-
     /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
     resize: vertical;
 }
 
 /* os botões precisam de estilos especiais também. Para esse fim, nós o colocamos dentro de uma <div> com uma classe css button. Aqui, queremos que o botão esteja alinhado com os outros campos . Para conseguir isso, temos de imitar a presença de uma <label>. Isso é feito utilizando padding e margin. */
-
 
 .btnTweetar {
     /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
@@ -88,12 +87,12 @@ textarea {
     color: #ffffff;
 }
 
-#messageHere{
+#messageHere {
     font-family: Arial;
     font-size: 5em;
 }
 
-#contadorHere{
+#contadorHere {
     font-size: 4em;
     margin-left: 2em;
 }
