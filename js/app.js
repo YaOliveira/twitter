@@ -11,8 +11,6 @@ btnPrint.addEventListener('click', function () {
     event.preventDefault();
 });
 
-
-
 // // versão 2
 
 window.doSomething = function (input) {
@@ -23,37 +21,28 @@ window.doSomething = function (input) {
 /* contador de caracteres */
 
 function caracteres() {
-    let max = 10 ;
-    let atual = document.getElementById("msg").value.length;  
+    let max = 20;
+    let atual = document.getElementById("msg").value.length;
     let valor = max - atual;
     console.log(valor);
-    
-    
-    if (valor > 0) {
+
+
+    if (valor > 10 && valor <= 20) {
         document.getElementById("contadorHere").innerHTML = valor + " caracteres restantes";
         document.getElementsByClassName('btnTweetar')[0].disabled = false;
-        
-     }else if (valor < 0) {
+        document.getElementById("contadorHere").style.color = 'yellow';
+    } else if (valor >= 0 && valor <= 10) {
+        document.getElementById("contadorHere").innerHTML = valor + " caracteres restantes";
+        document.getElementsByClassName('btnTweetar')[0].disabled = false;
+        document.getElementById("contadorHere").style.color = '#010101';
+
+    } else {
         document.getElementById("contadorHere").innerHTML = valor;
         document.getElementsByClassName('btnTweetar')[0].disabled = true;
-        document.getElementById("contadorHere").style.color='red';
+        document.getElementById("contadorHere").style.color = '#cc0000';
     }
 }
 
 
-
-
-// function contaCaracteres(){
-//     let caracteresRestantes = 255;
-//     let caracteresDigitados = document.getElementById("msg").value.length;
-//     let caracteresRestantes = caracteresRestantes - caracteresDigitados;
-
-//     return contaCaracteres;
-// }
-
-// function printContador(contaCaracteres){
-//     let contador = contaCaracteres; 
-//     document.querySelector('#contadorHere').innerHTML = contador;
-// }
 
 
