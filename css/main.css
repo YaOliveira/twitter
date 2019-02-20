@@ -43,7 +43,7 @@ label {
     text-align: right;
 }
 
-input, textarea {
+textarea {
     /* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
     font: 1em sans-serif;
 
@@ -80,12 +80,14 @@ textarea {
 /* os botões precisam de estilos especiais também. Para esse fim, nós o colocamos dentro de uma <div> com uma classe css button. Aqui, queremos que o botão esteja alinhado com os outros campos . Para conseguir isso, temos de imitar a presença de uma <label>. Isso é feito utilizando padding e margin. */
 
 
-button {
+.btnTweetar {
     /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
     margin-left: 24em;
     background: #4AB3F4;
     font-weight: bold;
     color: #ffffff;
 }
-
-
+#messageHere{
+    font-family: Arial;
+    font-size: 5em;
+}

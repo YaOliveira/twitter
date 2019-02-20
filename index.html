@@ -13,22 +13,26 @@
 
 <body>
     <header>
-        <img id = "img-topo-bkg" src="assets/images/favicon_twitter.png" alt="Logo do Twitter">
+        <img id="img-topo-bkg" src="assets/images/favicon_twitter.png" alt="Logo do Twitter">
     </header>
     <hr>
     <form method="post">
-        
+
         <div>
             <label for="msg">Mensagem:</label>
-            <textarea id="msg" placeholder="O que está acontecendo?"></textarea>
+            <textarea id="msg" onkeyup="javascript: doSomething(this)" placeholder="O que está acontecendo?"></textarea>
         </div>
         <div>
-            <button onclick="printMessage()"class="btnTweetar" type="submit">Tweetar</button>
+            <input id="btntweetar" class="btnTweetar" type="submit" value="Tweetar" disabled="disabled" />
         </div>
 
     </form>
+    <br>
+    
     <p id="messageHere"></p>
     <script src="js/app.js"></script>
+
 </body>
 
 </html>
+
