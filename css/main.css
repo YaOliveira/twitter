@@ -7,13 +7,13 @@ header {
     background-color: #FFFFFF;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+   
 }
 
    
 #img-topo-bkg {
     width: 2em;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 1em;
 }
 
