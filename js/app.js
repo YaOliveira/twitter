@@ -1,83 +1,68 @@
-/* printar a mensagem postada pelo usuário */
 let btntweetar = document.getElementById("btntweetar");
 let writeTweete = document.getElementById("msg");
 
-btntweetar.addEventListener('click', (event)=>{
-  event.preventDefault();
-  printTweete();
-  resetTweete();
-  
+btntweetar.addEventListener('click', (event) => {
+    event.preventDefault();
+    printTweete();
+    resetTweete();
+
 });
 
-function printTweete(){
-  let newNode = document.createElement("div");
-  let hourCaptured = document.createElement("p");
-  hourCaptured.innerHTML= time();
- 
-  let tweete = document.createElement("p");
- 
-   tweete.innerHTML = writeTweete.value;
+function printTweete() {
+    let newNode = document.createElement("div");
+    let hourCaptured = document.createElement("p");
 
-   newNode.appendChild(tweete);
-   newNode.appendChild(hourCaptured);
-  
-   document.getElementById("messageHere").appendChild(newNode);
+    hourCaptured.innerHTML = time();
+
+    let tweete = document.createElement("p");
+
+
+    tweete.innerHTML = writeTweete.value;
+
+    newNode.appendChild(tweete);
+    newNode.appendChild(hourCaptured);
+
+    document.getElementById("messageHere").appendChild(newNode);
 
 }
 
 function resetTweete() {
-  writeTweete.value = "";
+    writeTweete.value = "";
 }
 
-/* função de inputar hora */
-
-function time(){
+function time() {
     let date = new Date;
-    let horas = date.getHours().toString();
+    let inHours = date.getHours().toString();
     let min = date.getMinutes().toString();
-    let horaFinal = horas + ":" + min;
-  
-    return horaFinal;
-  
-  }
+    let finalHour = inHours + ":" + min;
 
-// /* printar a mensagem postada pelo usuário */
-// let btnPrint = document.querySelector('.btnTweetar');
+    return finalHour;
 
-// function printMensagem() {
-//     let tweete = document.getElementById("msg").value;
-//     document.querySelector('#messageHere').innerHTML = tweete;
-// }
-
-// btnPrint.addEventListener('click', function () {
-//     printMensagem();
-//     event.preventDefault();
-// });
-
-// // versão 2
+}
 
 window.doSomething = function (input) {
     document.getElementById('btntweetar').disabled = (input.value.length === 0);
 }
 
-/*função para contador regressivo de caracteres da textarea*/
-/* contador de caracteres */
-
 function caracteres() {
-    let max = 20;
+    let max = 140;
     let atual = document.getElementById("msg").value.length;
     let valor = max - atual;
     console.log(valor);
 
 
-    if (valor > 10 && valor <= 20) {
+    if (valor > 0 && valor <= 119) {
         document.getElementById("contadorHere").innerHTML = valor + " caracteres restantes";
         document.getElementsByClassName('btnTweetar')[0].disabled = false;
-        document.getElementById("contadorHere").style.color = 'yellow';
-    } else if (valor >= 0 && valor <= 10) {
+        document.getElementById("contadorHere").style.color = '#FF8C00';
+    } else if (valor > 120 && valor <= 129) {
         document.getElementById("contadorHere").innerHTML = valor + " caracteres restantes";
         document.getElementsByClassName('btnTweetar')[0].disabled = false;
-        document.getElementById("contadorHere").style.color = '#010101';
+        document.getElementById("contadorHere").style.color = '#FFD700';
+    } else if (valor >= 130 && valor <= 140) {
+        document.getElementById("contadorHere").innerHTML = valor + " caracteres restantes";
+        document.getElementsByClassName('btnTweetar')[0].disabled = false;
+        document.getElementById("contadorHere").style.color = '#4AB3F4';
 
     } else {
         document.getElementById("contadorHere").innerHTML = valor;
