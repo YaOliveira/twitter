@@ -6,8 +6,11 @@
 header {
     background-color: #FFFFFF;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
+   
 #img-topo-bkg {
     width: 2em;
     margin: 0 auto;
