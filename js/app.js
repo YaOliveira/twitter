@@ -56,7 +56,7 @@ function caracteres() {
         document.getElementById("contadorHere").innerHTML = valor + " caracteres restantes";
         document.getElementsByClassName('btnTweetar')[0].disabled = false;
         document.getElementById("contadorHere").style.color = '#FF8C00';
-    } else if (valor > 120 && valor <= 129) {
+    } else if (valor >= 120 && valor <= 129) {
         document.getElementById("contadorHere").innerHTML = valor + " caracteres restantes";
         document.getElementsByClassName('btnTweetar')[0].disabled = false;
         document.getElementById("contadorHere").style.color = '#FFD700';
