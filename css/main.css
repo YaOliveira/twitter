@@ -86,13 +86,17 @@ textarea {
     font-weight: bold;
     color: #ffffff;
 }
-
-#messageHere {
-    font-family: Arial;
-    font-size: 5em;
-}
-
 #contadorHere {
     font-size: 4em;
     margin-left: 2em;
 }
+
+
+#messageHere div{
+    font-family: Arial;
+    font-size: 3em;
+    background-color: #FFFFFF;
+    margin-top: 5%;
+}
+
+

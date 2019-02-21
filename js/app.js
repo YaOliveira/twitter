@@ -1,15 +1,58 @@
 /* printar a mensagem postada pelo usuário */
-let btnPrint = document.querySelector('.btnTweetar');
+let btntweetar = document.getElementById("btntweetar");
+let writeTweete = document.getElementById("msg");
 
-function printMensagem() {
-    let tweete = document.getElementById("msg").value;
-    document.querySelector('#messageHere').innerHTML = tweete;
+btntweetar.addEventListener('click', (event)=>{
+  event.preventDefault();
+  printTweete();
+  resetTweete();
+  
+});
+
+function printTweete(){
+  let newNode = document.createElement("div");
+  let hourCaptured = document.createElement("p");
+  hourCaptured.innerHTML= time();
+ 
+  let tweete = document.createElement("p");
+ 
+   tweete.innerHTML = writeTweete.value;
+
+   newNode.appendChild(tweete);
+   newNode.appendChild(hourCaptured);
+  
+   document.getElementById("messageHere").appendChild(newNode);
+
 }
 
-btnPrint.addEventListener('click', function () {
-    printMensagem();
-    event.preventDefault();
-});
+function resetTweete() {
+  writeTweete.value = "";
+}
+
+/* função de inputar hora */
+
+function time(){
+    let date = new Date;
+    let horas = date.getHours().toString();
+    let min = date.getMinutes().toString();
+    let horaFinal = horas + ":" + min;
+  
+    return horaFinal;
+  
+  }
+
+// /* printar a mensagem postada pelo usuário */
+// let btnPrint = document.querySelector('.btnTweetar');
+
+// function printMensagem() {
+//     let tweete = document.getElementById("msg").value;
+//     document.querySelector('#messageHere').innerHTML = tweete;
+// }
+
+// btnPrint.addEventListener('click', function () {
+//     printMensagem();
+//     event.preventDefault();
+// });
 
 // // versão 2
 
