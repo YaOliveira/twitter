@@ -16,7 +16,6 @@ function printTweete() {
 
     let tweete = document.createElement("p");
 
-
     tweete.innerHTML = writeTweete.value;
 
     newNode.appendChild(tweete);
@@ -34,22 +33,24 @@ function time() {
     let date = new Date;
     let inHours = date.getHours().toString();
     let min = date.getMinutes().toString();
-    let finalHour = inHours + ":" + min;
+    let finalHour;
+
+    if (min < 10) {
+        finalHour = "Postado às " + inHours + ":0" + min;
+    } else {
+        finalHour = "Postado às " + inHours + ":" + min;
+
+    }
 
     return finalHour;
 
 }
 
-window.doSomething = function (input) {
-    document.getElementById('btntweetar').disabled = (input.value.length === 0);
-}
 
 function caracteres() {
     let max = 140;
     let atual = document.getElementById("msg").value.length;
     let valor = max - atual;
-    console.log(valor);
-
 
     if (valor > 0 && valor <= 119) {
         document.getElementById("contadorHere").innerHTML = valor + " caracteres restantes";

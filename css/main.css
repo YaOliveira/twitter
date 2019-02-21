@@ -13,7 +13,6 @@ header {
    
 #img-topo-bkg {
     width: 2em;
-    /* margin: 0 auto; */
     padding: 1em;
 }
 
@@ -45,6 +44,8 @@ textarea {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #4AB3F4;
+    overflow-x: hidden; /* esconder o scroll */
+    overflow-Y: hidden;
 }
 
 input:focus, textarea:focus {
@@ -74,7 +75,7 @@ textarea {
     font-family: Arial;
     font-size: 1em;
     background-color: #FFFFFF;
-    margin-top: 5%;
+    margin-top: 0.5em;;
     padding: 1em;
     border: 1px solid #4AB3F4;
     border-radius: 1em;
